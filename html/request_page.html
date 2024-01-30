@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requisições</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Incluindo a biblioteca Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <div class="letras-topo">
+        <h2>## Nome Sobrenome##</h2>
+        <h3>Mat.: 0000000</h3>
+        <p>C.CUSTO:000000</p>
+    </div>
+  </header>
+  <main>
+    <div class="tabela-pedido">
+      <section id="formulario">
+      <h2 class="title_tab">Formulário</h2>
+      <table id="tabela-formulario">
+        <thead>
+          <tr>
+            <th>Foto Item</th>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Observação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>
+              <input type="text" name="item[]" placeholder="Item">
+            </td>
+            <td>
+              <select name="quantidade[]">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>              
+            </td>
+            <td>
+              <textarea name="observar_tabela" placeholder="Campo para anotar observação" maxlength="200" height="100px" width="200px"></textarea>
+            </td>
+             <td><button class="btn btn-danger" onclick="removerLinha(this)">Remover</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <!-- Botão "Adicionar" -->
+      <button class="btn btn-success" onclick="adicionarLinha()">Adicionar</button>
+    </section>
+    <div class="caixa-texto">
+      <section id="mensagens">
+        <h2>Mensagens</h2>
+        <textarea name="mensagens" placeholder="Descrições adicionais"></textarea>
+      </section>
+    </div>
+    <!-- Use a classe "btn btn-success float-right" para o botão "Enviar solicitação" -->
+    <input type="submit" class="btn btn-success float-right" value="Enviar solicitação">
+  </main>
+  <footer>
+    
+  </footer>
+ e <script src="script.js"></script>
+</body>
+</html>
